@@ -1,0 +1,15 @@
+GetPoem generate a {love|Topic} poem
+GetPoem generate a {civil war|Topic} poem
+GetPoem generate a {new york city|Topic} poem 
+GetPoem get me a {hate|Topic} poem
+GetPoem get me a {new jersey|Topic} poem
+GetPoem get me a {new york city|Topic} poem
+GetPoem generate a poem with {skateboard|Topic} as the topic
+GetPoem generate a poem with {san diego|Topic} as the topic
+GetPoem generate a poem with {new york city|Topic} as the topic
+GetPoem get me a poem with {bike|Topic} as the topic
+GetPoem get me a poem with {civil war|Topic} as the topic
+GetPoem get me a poem with {new york city|Topic} as the topic
+GetPoem {happy|Topic}
+GetPoem {civil war|Topic}
+GetPoem {new york city|Topic}
