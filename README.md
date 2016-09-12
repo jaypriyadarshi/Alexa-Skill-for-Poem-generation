@@ -7,4 +7,4 @@ Skill for Amazon Echo device to generate Poetry on demand
 - The developed node.js was hosted on AWS lambda function
 - Poetry generation is work of Marjan Ghazvininejad, Xing Shi and Kevin Knight at USC ISI, I was responsible for porting the web service to Amazon device
 
-Project Demo can be found here: https://www.youtube.com/watch?v=frT6wRWqMME&list=PLe_uOr8nxZ3uzGncXC66hxlRq4K2lR4Ng
+Project Demo can be found here: https://www.youtube.com/watch?v=wENPED7kCsE&list=PLe_uOr8nxZ3uzGncXC66hxlRq4K2lR4Ng&index=1
