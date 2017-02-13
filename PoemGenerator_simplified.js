@@ -84,9 +84,10 @@ function onIntent(intentRequest, session, callback) {
 
     // Dispatch to your skill's intent handlers
     if ("GetPoem" === intentName) {
+        retreivePoem(intent, session, callback); 
+    }else if ("AMAZON.YesIntent" === intentName) {
         retreivePoem(intent, session, callback);
-    } 
-    } else if ("AMAZON.HelpIntent" === intentName) {
+    }else if ("AMAZON.HelpIntent" === intentName) {
         getWelcomeResponse(callback);
     } else if ("AMAZON.StopIntent" === intentName || "AMAZON.CancelIntent" === intentName) {
         handleSessionEndRequest(callback);
@@ -162,6 +163,27 @@ var getJson = function(poemTopic, callback){
   });
 };
 
+
+function confirm(intent, session, callback){
+    var cardTitle = intent.slots.Topic.value;
+    var poemTopicSlot = intent.slots.Topic;
+    var repromptText = "";
+    var sessionAttributes = {};
+    var shouldEndSession = false;
+    var speechOutput = "";
+
+    if (poemTopicSlot) {
+        sessionAttributes = createPoemTopicAttributes(poemTopicSlot.value);
+        speechOutput = "You said " + poemTopicSlot.value + ", right?" ;
+    } else{
+        speechOutput = "I'm not sure what the topic is. Please try again";
+
+    }
+    callback(sessionAttributes,
+         buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+}
+
+
 function retreivePoem(intent, session, callback){
     var cardTitle = "";
     var repromptText = "";
@@ -169,10 +191,6 @@ function retreivePoem(intent, session, callback){
     var shouldEndSession = false;
     var speechOutput = "";
     var poemTopic;
-
-    if(intent.slots.Topic){
-        sessionAttributes = createPoemTopicAttributes(intent.slots.Topic.value);
-    }
 
     if (session.attributes) {
 
