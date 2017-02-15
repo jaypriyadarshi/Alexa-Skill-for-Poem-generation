@@ -110,7 +110,7 @@ function getWelcomeResponse(callback) {
     // If we wanted to initialize the session to have some attributes we could add those here.
     var sessionAttributes = {};
     var cardTitle = "Welcome";
-    var speechOutput = "Welcome to the Poem Generator. " +
+    var speechOutput = "Welcome to the Poetry Generator. " +
         "Please give me a topic.";
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
@@ -124,7 +124,7 @@ function getWelcomeResponse(callback) {
 
 function handleSessionEndRequest(callback) {
     var cardTitle = "Session Ended";
-    var speechOutput = "Thank you for trying the Peom Generator Application. Have a nice day!";
+    var speechOutput = "Thank you for trying the Peotry Generator Application. Have a nice day!";
     // Setting this to true ends the session and exits the skill.
     var shouldEndSession = true;
     
@@ -186,7 +186,7 @@ function retreivePoem(intent, session, callback){
               var result = JSON.parse(body);
               var cleanResult = result.poem;
               cleanResult = cleanResult.replace(/<br\/\/>/g , "");
-              speechOutput = cleanResult;
+              speechOutput = cleanResult + '.,.,.,.,., give me another topic.';
               callback(sessionAttributes,
          buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
             });
@@ -205,8 +205,9 @@ function retreivePoem(intent, session, callback){
         callback(sessionAttributes,
          buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
     }
-}
 
+    
+}
 
 function createPoemTopicAttributes(poemTopic) {
     return {
