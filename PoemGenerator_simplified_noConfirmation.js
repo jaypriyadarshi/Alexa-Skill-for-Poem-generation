@@ -115,7 +115,7 @@ function getWelcomeResponse(callback) {
 
 function handleSessionEndRequest(callback) {
     var cardTitle = "Session Ended";
-    var speechOutput = "Thank you for trying the Peotry Generator Application. Have a nice day!";
+    var speechOutput = "Thank you for trying the Poetry Generator Application. Have a nice day!";
     // Setting this to true ends the session and exits the skill.
     var shouldEndSession = true;
     
@@ -179,7 +179,7 @@ function retreivePoem(intent, session, callback){
               var result = JSON.parse(body);
               var cleanResult = result.poem;
               cleanResult = cleanResult.replace(/<br\/\/>/g , "");
-              speechOutput = cleanResult + '<break time=\"1s\"/> Feel free to give me another topic.';
+              speechOutput = cleanResult + '<break time=\"1.5s\"/> Feel free to give me another topic.';
               callback(sessionAttributes,
          buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
             });
