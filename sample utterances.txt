@@ -4,12 +4,20 @@ GetPoem generate a {new york city|Topic} poem
 GetPoem get me a {hate|Topic} poem
 GetPoem get me a {new jersey|Topic} poem
 GetPoem get me a {new york city|Topic} poem
-GetPoem generate a poem with {skateboard|Topic} as the topic
-GetPoem generate a poem with {san diego|Topic} as the topic
-GetPoem generate a poem with {new york city|Topic} as the topic
+GetPoem get me a {new york city|Topic} poem
 GetPoem get me a poem with {bike|Topic} as the topic
 GetPoem get me a poem with {civil war|Topic} as the topic
+GetPoem get me a poem with {the war|Topic} as the topic
 GetPoem get me a poem with {new york city|Topic} as the topic
+GetPoem get me a poem with {the big apple|Topic} as the topic
+GetPoem write me a poem about {mountains|Topic}
+GetPoem write me a poem about {san diego|Topic}
+GetPoem write me a poem about {the wall|Topic}
+GetPoem write me a poem about {new york city|Topic}
+GetPoem write me a poem about {the great wall|Topic}
 GetPoem {happy|Topic}
 GetPoem {civil war|Topic}
+GetPoem {the wall| Topic}
 GetPoem {new york city|Topic}
+GetPoem {the big apple|Topic}
+GetPoem {jack the ripper|Topic}
