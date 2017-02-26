@@ -116,7 +116,7 @@ function getWelcomeResponse(callback) {
 function helpFunction(callback){
     var sessionAttributes = {};
     var cardTitle = "Help";
-    var speechOutput = "You can simply tell me a topic, or, you can say write me a poem about mountains. You can say stop to exit. Please tell me your choice";
+    var speechOutput = "You can simply tell me a topic, or, you can say write me a poem about mountains. You can say stop to exit. Please tell me your choice?";
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
     var repromptText = "Please give me a topic, or, say stop to exit";
