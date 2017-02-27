@@ -101,7 +101,7 @@ function getWelcomeResponse(callback) {
     // If we wanted to initialize the session to have some attributes we could add those here.
     var sessionAttributes = {};
     var cardTitle = "Welcome";
-    var speechOutput = "Welcome to the Poetry Generator. " +
+    var speechOutput = "Welcome to Custom Poetry. " +
         "Please give me a topic.";
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
@@ -129,7 +129,7 @@ function helpFunction(callback){
 
 function handleSessionEndRequest(callback) {
     var cardTitle = "Session Ended";
-    var speechOutput = "Thank you for trying the Poetry Generator Application. Have a nice day!";
+    var speechOutput = "Thank you for trying Custom Poetry. Have a nice day!";
     // Setting this to true ends the session and exits the skill.
     var shouldEndSession = true;
     
